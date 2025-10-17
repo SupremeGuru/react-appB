@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "id": "423a",
+      "FirstName": "Bukola",
+      "LastName": "Ayo",
+      "Email": "bukkyayo@gmail.com",
+      "PhoneNumber": "09022733350",
+      "Password": "keke",
+      "ConfirmPassword": "keke",
+      "Country": "USA"
+    },
+    {
+      "id": "4948",
+      "FirstName": "Emeka",
+      "LastName": "Nwadinigwe",
+      "Email": "emekanwadinigwe1@gmail.com",
+      "PhoneNumber": "09038337030",
+      "Password": "Nwadinigwe",
+      "ConfirmPassword": "Nwadinigwe",
+      "Country": "Nigeria"
+    },
+    {
+      "id": "46f7",
+      "FirstName": "Duke",
+      "LastName": "Akhere",
+      "Email": "dukeahkere@gmail.com",
+      "PhoneNumber": "07043763245",
+      "Password": "duke",
+      "ConfirmPassword": "duke",
+      "Country": "Washington DC"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn6",
+      "userId": "f51c",
+      "Reference": "REF12350",
+      "AmountSent": 750,
+      "Rate": 1700,
+      "Channel": "Online Payment",
+      "Recipient": "Sophia White",
+      "Status": "Pending"
+    },
+    {
+      "id": "txn7",
+      "userId": "423a",
+      "Reference": "REF12351",
+      "AmountSent": 600,
+      "Rate": 1700,
+      "Channel": "Bank Transfer",
+      "Recipient": "David Black",
+      "Status": "Completed"
+    },
+    {
+      "id": "txn8",
+      "userId": "423b",
+      "Reference": "REF12352",
+      "AmountSent": 800,
+      "Rate": 1700,
+      "Channel": "Bank Transfer",
+      "Recipient": "Andrew Tate",
+      "Status": "Completed"
+    },
+    {
+      "id": "txn9",
+      "userId": "450y",
+      "Reference": "REF12353",
+      "AmountSent": 800,
+      "Rate": 1700,
+      "Channel": "Bank Transfer",
+      "Recipient": "Mr Martins",
+      "Status": "Pending"
+    },
+    {
+      "id": "txn10",
+      "userId": "240bg",
+      "Reference": "REF12354",
+      "AmountSent": 700,
+      "Rate": 1700,
+      "Channel": "Card Payment",
+      "Recipient": "Mr Martins",
+      "Status": "Pending"
+    },
+    {
+      "id": "txn11",
+      "userId": "240ac",
+      "Reference": "REF12355",
+      "AmountSent": 700,
+      "Rate": 1700,
+      "Channel": "Online Payment",
+      "Recipient": "Ashley White",
+      "Status": "Completed"
+    },
+    {
+      "id": "txn12",
+      "userId": "582bd",
+      "Reference": "REF12356",
+      "AmountSent": 1200,
+      "Rate": 1800,
+      "Channel": "Bank Transfer",
+      "Recipient": "John Doe",
+      "Status": "Pending"
+    }    
+  ]
+}
