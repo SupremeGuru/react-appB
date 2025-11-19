@@ -66,34 +66,35 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // const validationErrors = validate();
-    // setErrors(validationErrors);
+    const validationErrors = validate();
+    setErrors(validationErrors);
 
-    // // If no validation errors, form is ready to be submitted
-    // if (Object.keys(validationErrors).length === 0) {
-    //   axios.post('http://localhost:8000/users', formData)
+    // If no validation errors, form is ready to be submitted
+    if (Object.keys(validationErrors).length === 0) {
+      window.alert('Signed Up Successfully');
+
+      // Pass only email to VerifyEmail page
+      navigate('/VerifyEmail', { state: { email: formData.Email } });
+    //   axios.post('', formData)
     //     .then(result => {
-    //       window.alert('Signed Up Successfully');
 
-    //       // Pass only email to VerifyEmail page
-    //       navigate('/VerifyEmail', { state: { email: formData.Email } });
     //     })
     //     .catch(err => console.log(err)
     //     )
-    // }
+    }
 
-    // // Reset form data after submission  
-    // setFormData({
-    //   FirstName: '',
-    //   LastName: '',
-    //   Email: '',
-    //   PhoneNumber: '',
-    //   Password: '',
-    //   ConfirmPassword: '',
-    //   Country: ''
-    // });
+    // Reset form data after submission  
+    setFormData({
+      FirstName: '',
+      LastName: '',
+      Email: '',
+      PhoneNumber: '',
+      Password: '',
+      ConfirmPassword: '',
+      Country: ''
+    });
 
-    navigate("/Dashboard")
+    
   };
 
   // Handle form input changes

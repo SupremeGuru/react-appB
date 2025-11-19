@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { ExchangeContext } from "../context/ExchangeContext";
 
 const Transact = () => {
+  const {setTransactPin} = useContext(ExchangeContext)
   const [pin, setPin] = useState(["", "", "", ""]);
   const navigate = useNavigate();
 
@@ -34,10 +37,14 @@ const Transact = () => {
 
   const handleNavigate = () => {
     // Check if all inputs are filled
-    if (pin.every((item) => item !== "")) {
+    if (pin.every((item) => (item !== ""))) {
       // If all inputs are filled, navigate to the next page
-      navigate("/Confirm");
-    }
+      setTransactPin([...pin])
+      navigate('/Confirm');
+      // navigate("/Confirm");
+    }else{
+          toast.error("Fill every box")
+        }
   };
 
   return (

@@ -1,4 +1,13 @@
 /* eslint-disable no-unused-vars */
+
+npm i baseline-browser-mapping@latest -D`
+
+, { state: { pin: [...pin] } }
+
+check this link
+https://vite.dev/config/server-options.html#server-fs-allow   
+
+
 import React from 'react';
 
 const Footer = () => {

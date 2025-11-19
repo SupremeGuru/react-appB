@@ -31,12 +31,12 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // const validationErrors = validate();
+    const validationErrors = validate();
 
-    // if (Object.keys(validationErrors).length > 0) {
-    //   setError('Wrong credentials');
-    //   return;
-    // }
+    if (Object.keys(validationErrors).length > 0) {
+      setError('Wrong credentials');
+      return;
+    }
 
     // try {
     //   const result = await axios.get('http://localhost:8000/users');

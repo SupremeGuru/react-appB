@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { ExchangeContext } from "../context/ExchangeContext";
 
-const Transact = () => {
-  const [pin, setPin] = useState(["", "", "", ""]);
+const Confirm = () => {
+  const {verifiedPin,confirmPin,setConfirmPin,checkPin} = useContext(ExchangeContext);
   const navigate = useNavigate();
-
+  const [pin, setPin] = useState(["", "", "", ""]);
   // Handle input change
   const handleChange = (e, index) => {
     const value = e.target.value;
@@ -36,10 +38,19 @@ const Transact = () => {
     // Check if all inputs are filled
     if (pin.every((item) => item !== "")) {
       // If all inputs are filled, navigate to the next page
-      navigate("/SignIn");
+      setConfirmPin([...pin])
+      checkPin()
+      // navigate("/SignIn")
+    }else{
+      toast.error("Fill every box")
     }
   };
 
+  useEffect(()=>{
+    if(verifiedPin){
+      navigate("/SignIn")
+    }
+  },[confirmPin])
   return (
     <div className='flex flex-col h-screen items-center gap-20 py-20'>
       <h2 className="font-extrabold text-xl">Confirm Pin</h2>
@@ -63,4 +74,4 @@ const Transact = () => {
   );
 };
 
-export default Transact;
+export default Confirm;

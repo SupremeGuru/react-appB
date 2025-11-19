@@ -33,10 +33,13 @@ import Receiver from './dashcomp/Receiver'
 import ReviewPage from "./dashcomp/ReviewPage";
 import Dashboard from "./dashcomp/layout/Dashboard";
 import Error from "./pages/Error";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
     <div>
+      <ToastContainer/>
       <Routes>
         {/* Landing Page Route */}
         <Route
